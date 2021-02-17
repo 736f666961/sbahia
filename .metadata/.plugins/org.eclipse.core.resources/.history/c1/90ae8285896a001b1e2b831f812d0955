@@ -1,0 +1,9 @@
+package ma.youcode.sbahia.controllers.admin;
+
+public class EditProduct {
+
+	public EditProduct() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

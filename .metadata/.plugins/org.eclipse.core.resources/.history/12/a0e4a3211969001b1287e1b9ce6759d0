@@ -1,0 +1,77 @@
+body {
+
+
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+	width: 95%;
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.container .card {
+	border: 1px solid black;
+	width: 30%;
+	/*height: 400px;*/
+    margin-left: 3%;
+    margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container .card .header {
+	position: relative;
+	width: 100%;
+}
+
+.container .card .header img {
+	float: right;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.container .card-body {
+	display: flex;
+}
+
+.container .product-image {
+	margin-left: 15px;
+}
+
+.container .card-body .product-info {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.container .card-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container .card-buttons .like, .card-buttons .dislike {
+	width: 45%;
+	margin: 2px;
+	padding: 8px;
+}
+
+.container .card-footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container .card-footer .like, .card-footer .dislike {
+	width: 45%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	display: flex;
+}
+

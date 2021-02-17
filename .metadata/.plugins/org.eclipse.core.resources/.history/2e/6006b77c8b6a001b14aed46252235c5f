@@ -1,0 +1,145 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<element>
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<servlet-name>Main</servlet-name>
+  	<display-name>Main</display-name>
+  	<description></description>
+  	<servlet-class>com.youcode.firstwebapp.controllers.Main</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ArticleDao</servlet-name>
+  	<display-name>ArticleDao</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.dao.ArticleDao</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>Database</servlet-name>
+  	<display-name>Database</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.database.Database</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ArticleDaoImpl</servlet-name>
+  	<display-name>ArticleDaoImpl</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.impldao.ArticleDaoImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>Article</servlet-name>
+  	<display-name>Article</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.models.Article</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>DeleteArticle</servlet-name>
+  	<display-name>DeleteArticle</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.controllers.DeleteArticle</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>EditArticle</servlet-name>
+  	<display-name>EditArticle</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.controllers.EditArticle</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>SearchArticle</servlet-name>
+  	<display-name>SearchArticle</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.controllers.SearchArticle</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<display-name>Login</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.Login</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<display-name>Logout</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.Logout</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SignUp</servlet-name>
+  	<display-name>SignUp</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.SignUp</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddProduct</servlet-name>
+  	<display-name>AddProduct</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.admin.AddProduct</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Main</servlet-name>
+  	<url-pattern>/Main</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ArticleDao</servlet-name>
+  	<url-pattern>/ArticleDao</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Database</servlet-name>
+  	<url-pattern>/Database</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ArticleDaoImpl</servlet-name>
+  	<url-pattern>/ArticleDaoImpl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Article</servlet-name>
+  	<url-pattern>/Article</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>DeleteArticle</servlet-name>
+  	<url-pattern>/DeleteArticle/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditArticle</servlet-name>
+  	<url-pattern>/EditArticle/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchArticle</servlet-name>
+  	<url-pattern>/SearchArticle</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<se
+  	
+  	
+  	rvlet-name>AddProduct</servlet-name>
+  	<url-pattern>/AddProduct</url-pattern>
+  </servlet-mapping>
+</web-app>

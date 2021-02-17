@@ -1,0 +1,35 @@
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+body h1 {
+	text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container form {
+	width: 50%;
+}
+
+.container form .form-group {
+	margin-top: 12px;
+}
+
+.container form .form-group input {
+	padding: 12px;
+	margin-top: 12px;
+	width: 100%;
+}
+
+.container form button {
+	margin-top: 12px;
+	padding: 12px;
+	width: 104%;
+}

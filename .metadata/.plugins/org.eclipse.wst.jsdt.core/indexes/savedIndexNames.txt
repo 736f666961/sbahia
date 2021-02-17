@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\Sofia\Desktop\sbahia\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4052023133.index
+1552518177.index
+2249288024.index
+740075249.index
+2978132334.index
+2380069527.index
+1249418607.index

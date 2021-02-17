@@ -1,0 +1,88 @@
+<%@page import="java.util.List"%>
+<%@page import="ma.youcode.sbahia.impldao.ProductDaoImpl"%>
+<%@ page import="ma.youcode.sbahia.models.Product" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Products</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	</head>
+	<body>
+		<a href="/sbahia/logout" class="logout">Logout</a>
+		<div class="container">
+			<%
+		     	ProductDaoImpl productDaoImpl = new ProductDaoImpl();
+	        	List<Product> products = productDaoImpl.getAllProducts();
+	        	
+	        	for(Product product : products) {
+			%>
+			<div class="card">
+				<div class="header">
+					<a class="btn w-25" href="<%= request.getContextPath() + "/editProduct/?id=" + product.getId() %>">Edit</a>
+					<a class="btn w-25" href="<%= request.getContextPath() + "/deleteProduct/?id=" + product.getId() %>">Delete</a>
+				</div>
+				
+				<div class="card-body">
+					<div class="product-image">
+						<img alt="product image" width="100px" height="100px" src="<%= product.getProductImage() %>">
+					</div>
+					
+					<div class="product-info">
+						<h4><%= product.getProductName() %></h4>
+						<p><%= product.getproductDescription() %></p>
+					</div>
+				</div>
+				
+				<div class="card-buttons">
+					<a href="<%= request.getContextPath() + "/like/?id=" + product.getId() + "&page=admin" %>" class="like" <% if (product.isInteracted()) System.out.println("True"); %>>Like</a>
+					<a href="<%= request.getContextPath() + "/dislike/?id=" + product.getId() + "&page=admin" %>"  class="dislike">Dislike</a>
+				</div>
+				
+				<div class="card-footer">
+					<div class="like">
+						<img alt="like icon" width="15px" height="15px" src="./icons/like.png">
+						<p style="margin-top: 0px">:<%= product.getProductLikes() %></p>
+					</div>
+					
+					<div class="dislike">
+						<img alt="dislike icon" width="15px" height="15px" src="./icons/dislike.png">
+						<p style="margin-top: 0px">:<%= product.getProductDislikes() %></p>
+					</div>
+				</div>
+			</div>
+			
+			<% } %>
+			
+		</div>
+			
+			<div class="container">
+				<div class="form">
+					<%
+			         	if (session != null){
+			        		String message=(String)session.getAttribute("message");  
+			           		if (message != null) {
+			           			out.println(message);
+			           		}
+			        	}
+					%>
+					<h1>Add Product</h1>
+					<form action="/sbahia/AddProduct" method="POST">
+					  <label for="product_image">Product Image</label><br>
+					  <input type="text" id="product_image" name="product_image"><br>
+					  
+					  <label for="product_name">Product Name</label><br>
+					  <input type="text" id="product_name" name="product_name"><br>
+					  
+	  				  <label for="product_description">Product Description</label><br>
+					  <input type="text" id="product_description" name="product_description" ><br><br>
+					  
+					  <input class="btn btn-secondary btn-block" type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		
+	</body>
+</html>

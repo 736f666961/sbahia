@@ -1,0 +1,9 @@
+package ma.youcode.sbahia.controllers.admin;
+
+public class DeleteProduct {
+
+	public DeleteProduct() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

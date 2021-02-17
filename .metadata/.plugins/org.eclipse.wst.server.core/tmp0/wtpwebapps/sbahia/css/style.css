@@ -1,0 +1,155 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container  .login {
+	width: 60%;
+}
+
+.container {
+	width: 95%;
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.container .card {
+	border: 1px solid black;
+	width: 30%;
+	/*height: 400px;*/
+    margin-left: 3%;
+    margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container .card .header {
+	position: relative;
+	width: 100%;
+}
+
+.container .card .header .menu-icon {
+	cursor: pointer;
+	float: right;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.container .card .header .dialog {
+    width: 100px;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background: black;
+    top: 29px;	
+    border: 1px solid black;
+    display: none;
+    padding: 4px;
+}
+
+.container .card .header .dialog  a {
+    text-decoration: none;
+    padding: 0px;
+    color: white;
+    width: 100%;
+    display: block;
+}
+
+.container .card .header .dialog  a:hover {
+    text-decoration: none;
+    padding: 0px;
+    background-color: white;
+    color: black;
+}
+
+.container .card-body {
+	display: flex;
+	margin-top: 9px;
+}
+
+.container .product-image {
+	margin-left: 15px;
+}
+
+.container .card-body .product-info {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.container .card-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container .card-buttons .like, .card-buttons .dislike {
+	width: 45%;
+	margin: 2px;
+	padding: 8px;
+	border: 1px solid gray;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
+}
+
+.container .card-footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container .card-footer .like, .card-footer .dislike {
+	width: 45%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	display: flex;
+}
+
+.login-error {
+	text-align: center;
+	padding: 16px;
+	background-color: palevioletred;
+	color: white;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.logout {
+	position: absolute;
+	border: 1px solid black;
+	right: 0;
+	top: 0;
+	width: 100px;
+	text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+
+/*login and signup buttons*/
+.login-signup-buttons {
+    position: absolute;
+    bottom: 3px;
+    display: flex;
+    width: 99%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-around;
+}
+
+.login-signup-buttons .login, .login-signup-buttons .signup {
+	width: 46%;
+    padding: 10px;
+   	display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid gray;
+    color: black;
+   	
+}

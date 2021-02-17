@@ -1,0 +1,70 @@
+package ma.youcode.sbahia.controllers.admin;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import ma.youcode.sbahia.impldao.ProductDaoImpl;
+
+/**
+ * Servlet implementation class EditProduct
+ */
+@WebServlet("/editProduct/*")
+public class EditProduct extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ProductDaoImpl productDaoImpl;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public EditProduct() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// get product id
+		String productID = request.getParameter("id");
+		
+		response.sendRedirect("/sbahia/edit.jsp?id=" + productID);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Get data from user
+		int productID = Integer.parseInt(request.getParameter("id"));
+        String productImage = request.getParameter("product_image");
+        String productName = request.getParameter("product_name");
+        String productDescription = request.getParameter("product_description");
+        
+        // Instantiate productDaoImpl
+        productDaoImpl = new ProductDaoImpl();
+
+
+        // add article to database
+        int isEdited = productDaoImpl.editProduct(productID, productImage, productName, productDescription);
+  
+        // flash message
+        final String successMessage = "<div class='alert alert-success' role='alert'>Product edited successfully...!</div>";
+        final String errorMessage = "<div class='alert alert-danger' role='alert'>Product did not edited</div>";
+        
+        // check if data added to database
+//        String message = isEdited == 1 ? successMessage : errorMessage;
+        
+        // set reacted message
+//        HttpSession session = request.getSession();
+//        session.setAttribute("message", message);
+        
+        // redirect to home page
+        response.sendRedirect("/sbahia/admin.jsp");
+	}
+
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web 
+     Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3.dtd'>
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  
+  <servlet>
+  	<servlet-name>Database</servlet-name>
+  	<display-name>Database</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.firstwebapp.database.Database</servlet-class>
+  </servlet>
+  
+  
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<display-name>Login</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.Login</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<display-name>Logout</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.Logout</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>SignUp</servlet-name>
+  	<display-name>SignUp</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.SignUp</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddProduct</servlet-name>
+  	<display-name>AddProduct</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.admin.AddProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteProduct</servlet-name>
+  	<display-name>DeleteProduct</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.admin.DeleteProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Like</servlet-name>
+  	<display-name>Like</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.user.Like</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Dislike</servlet-name>
+  	<display-name>Dislike</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.user.Dislike</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditProduct</servlet-name>
+  	<display-name>EditProduct</display-name>
+  	<description></description>
+  	<servlet-class>ma.youcode.sbahia.controllers.admin.EditProduct</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>Database</servlet-name>
+  	<url-pattern>/Database</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteProduct</servlet-name>
+  	<url-pattern>/DeleteProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Like</servlet-name>
+  	<url-pattern>/Like</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Dislike</servlet-name>
+  	<url-pattern>/Dislike</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditProduct</servlet-name>
+  	<url-pattern>/EditProduct</url-pattern>
+  </servlet-mapping>
+
+</web-app>
